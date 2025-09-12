@@ -88,8 +88,7 @@
         height: 100vh;
     }
 
-    h1,
-    .xl {
+    h1 {
         font-family: var(--primary-font);
         font-size: clamp(2.5rem, 6vw, 3.5rem);
 
@@ -98,10 +97,7 @@
         border-radius: var(--border-radius);
         width: fit-content;
         padding: .5rem 1rem;
-        margin-top: 0rem;
-
-        display: flex;
-        justify-self: center;
+        margin: 0 auto;
     }
     p:nth-of-type(1) {
         max-width: 70ch;
@@ -109,7 +105,7 @@
         text-align: center;
         background-color: var(--background-color-two);
         border-radius: var(--border-radius);
-
+        margin: 1rem auto;
     }
     
     p {
@@ -123,17 +119,16 @@
         border: var(--border);
         border-radius: var(--border-radius);
 
-        width: 80%;
-        height: fit-content;
-        padding: 8rem 2rem;
+        max-width: 360px;
+        height: auto;
+        aspect-ratio: 5 / 7;
+        padding: 5rem 2rem;
 
         display: flex;
         flex-direction: column;
         place-items: center;
         position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        margin: 0 auto;
 
     }
 
@@ -165,17 +160,18 @@
     ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5rem;
+        gap: 3rem;
         position: relative; 
         cursor: pointer;
+        height: 100%;
+        align-items: center;
         
         li {
             position: relative;
-            /* padding: 2em; */
             transition: 0.5s;
             list-style-type: none;
-            display: flex;
-            justify-content: center;
+            height: 3.5em;
+            width: 3.5em;
 
             span {
                 position: absolute;
