@@ -14,28 +14,28 @@
         <div class="icon-top"></div> 
             <ul>
                 <li>
-                    <span class="icon">♥️</span>
-                    <span class="title">Birthday: { memberMe.birthdate }</span>
+                    <button class="icon">♥️</button>
+                    <button class="title">Birthday: { memberMe.birthdate }</button>
                 </li>
                 <li>
-                    <span class="icon">♥️</span>
-                    <span class="title">Fav tag:{ memberMe.fav_tag }</span>
+                    <button class="icon">♥️</button>
+                    <button class="title">Fav tag:{ memberMe.fav_tag }</button>
                 </li>
                 <li>
-                    <span class="icon">♥️</span>
-                    <span class="title">Fav property: { memberMe.fav_property }</span>
+                    <button class="icon">♥️</button>
+                    <button class="title">Fav property: { memberMe.fav_property }</button>
                 </li>
                 <li>
-                    <span class="icon">♥️</span>
-                    <span class="title">Fav attribute: { memberMe.fav_attribute }</span>
+                    <button class="icon">♥️</button>
+                    <button class="title">Fav attribute: { memberMe.fav_attribute }</button>
                 </li>
                 <li>
-                    <span class="icon">♥️</span>
-                    <span class="title">Fav feature: { memberMe.fav_feature }</span>
+                    <button class="icon">♥️</button>
+                    <button class="title">Fav feature: { memberMe.fav_feature }</button>
                 </li>
                 <li>
-                    <span class="icon">♥️</span>
-                    <span class="title">Fav coffee: { memberMe.fav_coffee }</span>
+                    <button class="icon">♥️</button>
+                    <button class="title">Fav coffee: { memberMe.fav_coffee }</button>
                 </li>
             </ul>
         <div class="icon-bottom"></div> 
@@ -173,8 +173,10 @@
             height: 3.5em;
             width: 3.5em;
 
-            span {
+            button {
                 position: absolute;
+                border: none;
+                background-color: var(--background-color-two);
             }
         }
     }
