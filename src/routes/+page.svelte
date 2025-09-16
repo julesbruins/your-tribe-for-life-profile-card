@@ -10,6 +10,18 @@
     <p>Get to know better by putting your mouse over the hearts on the card! Curious about the face behind the little fun facts? Flip the card.</p>
 
 <div class="flipping">
+
+        <form>
+            <input type="radio" id="front" name="profile-card" value="front"/>
+            <label for="front">front</label>
+    
+            <input type="radio" id="back" name="profile-card" value="back" />
+            <label for="back">back</label>
+        </form>
+
+    
+
+
     <section class="poker-card-info">
         <span class="icon-top">♥️</span>
             <ul>
@@ -52,13 +64,7 @@
         <span class="icon-bottom">♥️</span>
     </section>
 
-    <form>
-        <input type="radio" id="front" name="profile-card" value="front"/>
-        <label for="front">front</label><br />
 
-        <input type="radio" id="back" name="profile-card" value="back" />
-        <label for="back">back</label><br/>
-    </form>
 </div>  
 
 </main>
@@ -304,12 +310,22 @@
 
     /* FLIPPING CARD */
     form {
-        display: flex;
-        gap: 1rem;
+ 
+        
+        
+        
+
         position: absolute;
         bottom: 1rem;
         left: 50%;
         transform: translateX(-50%);
+        background-color: var(--background-color-two);
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin-top: 1rem;
+        z-index: 10;
+        font-family: var(--secondary-font);
+        color: var(--card-accent-dark);
 
     }
 
@@ -321,5 +337,14 @@
          transform: perspective(1000px) rotateY(-180deg) translateX(50%);
     }
 
+    input[type="radio"] {
+        accent-color: var(--card-accent-dark); 
+    }
+    label:hover {
+      transform: scale(1.2);
+    }
+    label:focus {
+        border: var(--border);
+    }
 
 </style>
