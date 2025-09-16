@@ -11,18 +11,18 @@
 
 <div class="flipping">
 
-        <form>
-            <input type="radio" id="front" name="profile-card" value="front"/>
-            <label for="front">front</label>
-    
-            <input type="radio" id="back" name="profile-card" value="back" />
-            <label for="back">back</label>
-        </form>
+    <form>
+        <input type="radio" id="front" name="profile-card" value="front"/>
+        <label for="front">front</label>
 
-    
+        <input type="radio" id="back" name="profile-card" value="back" />
+        <label for="back">back</label>
+    </form>
 
 
     <section class="poker-card-info">
+        <h2>front of the card</h2>
+
         <span class="icon-top">♥️</span>
             <ul>
                 <li>
@@ -55,6 +55,8 @@
 
 
     <section class="poker-card-photo">
+        <h2>back of the card</h2>
+
         <span class="icon-top">♥️</span>
              <div class="photo-flex">
             <img src="https://fdnd.directus.app/assets/{memberMe.mugshot}" alt="">
@@ -124,6 +126,13 @@
         padding: .5rem 1rem;
         margin: 1rem auto;
     }
+
+    h2 {
+        position: absolute;
+        bottom: -100vh;
+        
+    }
+
     p:nth-of-type(1) {
         max-width: 70ch;
         padding: 1rem;
@@ -138,58 +147,6 @@
         color: var(--card-accent-dark);
         font-size: 1rem;
     }
-
-    /* section {
-        background-color: var(--background-color-two);
-        border: var(--border);
-        border-radius: var(--border-radius);
-
-        max-width: 360px;
-        height: auto;
-        aspect-ratio: 5 / 7;
-        padding: 5rem 2rem;
-
-        display: flex;
-        flex-direction: column;
-        place-items: center;
-        position: relative;
-        margin: 0 auto;
-    } */
-    /* .poker-card-photo {
-        gap: 1rem;
-        justify-content: center;
-        
-        h2 {
-            font-family: var(--secondary-font);
-            color: var(--card-accent-dark);
-        }
-        img {
-            width: 100%;
-            border-radius: var(--border-radius);
-            border: var(--border);
-        }
-    } */
-
-    /* .icon-top:before,
-    .icon-bottom:after {
-        content: var(--heart);
-        background-color: var(--background-color-two);
-        padding: 1rem;
-        height: fit-content;
-        width: fit-content;
-        position: absolute;
-        border-radius: var(--border-radius);
-    }
-    .icon-top:before {
-        top: 0;
-        left: 0;
-    }
-    .icon-bottom:after {
-        bottom: 0;
-        right: 0;
-        rotate: 180deg;
-    } */
-
     
     section {
         position: absolute;
@@ -310,15 +267,11 @@
 
     /* FLIPPING CARD */
     form {
- 
-        
-        
-        
-
         position: absolute;
         bottom: 1rem;
         left: 50%;
         transform: translateX(-50%);
+
         background-color: var(--background-color-two);
         border-radius: var(--border-radius);
         padding: 1rem;
