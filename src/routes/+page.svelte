@@ -44,8 +44,11 @@
 
     <section class="poker-card-photo">
         <span class="icon-top">♥️</span>
-            <h2>{ memberMe.name }</h2>
+             <div class="photo-flex">
             <img src="https://fdnd.directus.app/assets/{memberMe.mugshot}" alt="">
+            <img src="https://fdnd.directus.app/assets/{memberMe.mugshot}" alt="">
+            </div>
+
         <span class="icon-bottom">♥️</span>
     </section>
 
@@ -113,7 +116,7 @@
         border-radius: var(--border-radius);
         width: fit-content;
         padding: .5rem 1rem;
-        margin: 0 auto;
+        margin: 1rem auto;
     }
     p:nth-of-type(1) {
         max-width: 70ch;
@@ -194,18 +197,21 @@
         
         left: 50%;
         transform: translateX(-50%);
-
+        box-shadow: 0 25px 15px rgba(0, 29, 11, 0.5);
+        transition: .5s;
 
         .icon-top {
             position: absolute;
             top: 1rem;
             left: 1rem;
+            font-size: 1.5rem;
         }
         .icon-bottom {
             position: absolute;
             bottom: 1rem;
             right: 1rem;
             rotate: 180deg;
+            font-size: 1.5rem;
         }
 
     }
@@ -218,14 +224,23 @@
         justify-content: center;
         z-index: -1;
         
-        h2 {
-            font-family: var(--secondary-font);
-            color: var(--card-accent-dark);
-        }
         img {
-            width: 80%;
+            width: 100%;
+            /* height: 80%; */
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0;
+            
+        }
+        img:nth-of-type(2) {
+            rotate: 180deg;
+        }
+        .photo-flex {
             border-radius: var(--border-radius);
             border: var(--border);
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
         }
     }
 
@@ -295,14 +310,15 @@
         bottom: 1rem;
         left: 50%;
         transform: translateX(-50%);
+
     }
 
     div:has([value="back"]:checked) .poker-card-photo {
         z-index: 1;
-        /* transform: rotateY(-180deg);       */
+        transform: perspective(1000px) rotateY(180deg) translateX(50%);
     }
     div:has([value="back"]:checked) .poker-card-info {
-        /* transform: rotateY(-180deg); */
+         transform: perspective(1000px) rotateY(-180deg) translateX(50%);
     }
 
 
