@@ -59,8 +59,8 @@
 
         <span class="icon-top">♥️</span>
              <div class="photo-flex">
-            <img src="https://fdnd.directus.app/assets/{memberMe.mugshot}" alt="" height="190" width="284">
-            <img src="https://fdnd.directus.app/assets/{memberMe.mugshot}" alt="" height="190" width="284">
+            <img src="https://fdnd.directus.app/assets/{memberMe.mugshot}?width=284&height=190&format=webp" alt="" height="190" width="284">
+            <img src="https://fdnd.directus.app/assets/{memberMe.mugshot}?width=284&height=190&format=webp" alt="" height="190" width="284">
             </div>
 
         <span class="icon-bottom">♥️</span>
