@@ -12,7 +12,7 @@
 <div class="flipping">
 
     <form>
-        <input type="radio" id="front" name="profile-card" value="front"/>
+        <input type="radio" id="front" name="profile-card" value="front" checked/>
         <label for="front">front</label>
 
         <input type="radio" id="back" name="profile-card" value="back" />
