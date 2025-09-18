@@ -80,16 +80,28 @@
 
     /* PRIMARY */
      @font-face {
-        font-family: "poker-extreme";
-        src: url("/fonts/Poker.ttf") format("truetype");
+        font-family: "poker-extreme-woff2";
+        src: url("/fonts/Poker.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "poker-extreme-woff";
+        src: url("/fonts/Poker.woff") format("woff");
         font-weight: 400;
         font-style: normal;
     }
 
     /* SECONDARY */
     @font-face {
-        font-family: "poker-relaxed";
-        src: url("/fonts/JqkasWild-w1YD6.ttf") format("truetype");
+        font-family: "poker-relaxed-woff2";
+        src: url("/fonts/JqkasWild-w1YD6.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "poker-relaxed-woff";
+        src: url("/fonts/JqkasWild-w1YD6.woff") format("woff");
         font-weight: 400;
         font-style: normal;
     }
@@ -99,12 +111,11 @@
     ::after {
         --heart: "♥️";
 
-        --primary-font: "poker-extreme";
-        --secondary-font: "poker-relaxed";
+        --primary-font: "poker-extreme-woff2", "poker-extreme-woff";
+        --secondary-font: "poker-relaxed-woff2", "poker-relaxed-woff";
 
         --background-color-one: ;
         --background-color-two: rgb(248, 229, 229);
-        --card-accent-light: rgb(196, 19, 19);
         --card-accent-dark: rgb(93, 8, 8);
         
         --border-radius: 1rem;
@@ -129,7 +140,7 @@
 
     h2 {
         position: absolute;
-        bottom: -100vh;
+        top: -100vh;
         
     }
 
